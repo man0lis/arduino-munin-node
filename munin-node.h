@@ -6,7 +6,10 @@ class MuninPluginField {
     public:
         MuninPluginField();
         virtual std::string getValue() = 0;
+        std::string name;
         void addConfig(std::string,std::string);
+        void config(EthernetClient*);
+        void fetch(EthernetClient*);
     private:
         std::list<std::pair<std::string,std::string>> config;
 };
